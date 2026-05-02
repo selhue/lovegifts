@@ -214,7 +214,7 @@
                 <span class="text-white/40 uppercase text-xs tracking-widest">Subtotal</span>
                 <span id="total-price" class="text-3xl text-white">₱0</span>
             </div>
-            <button onmousedown="goToTally()" class="btn-pill w-full bg-[#e70344] text-white py-5 text-lg active:scale-95 hover:brightness-110 transition-all">Proceed to Checkout</button>
+            <button onmousedown="selhuePay()" class="btn-pill w-full bg-[#e70344] text-white py-5 text-lg active:scale-95 hover:brightness-110 transition-all">Proceed to Checkout</button>
         </div>
     </div>
 </div>
@@ -245,9 +245,9 @@
   
   // Update this URL to your specific Tally form
 
-const TALLY_URL = 'https://tally.so/embed/q4YE82?alignLeft=1&hideTitle=1';
+const SELHUE-PAY = 'http://selhue.com/pay';
   
-function goToTally() {
+function selhuePay() {
    
     const summary = cart.reduce((acc, item) => {
         const productInfo = products.find(p => p.id === item.id);
@@ -265,7 +265,7 @@ function goToTally() {
     const totalText = document.getElementById('total-price').innerText;
 
     // 3. Construct URL
-    const url = `${TALLY_URL}&o=${encodeURIComponent(orderString)}&p=${encodeURIComponent(totalText)}`;
+    const url = `${SELHUE-PAY}?o=${encodeURIComponent(orderString)}&p=${encodeURIComponent(totalText)}`;
 
     // 4. Center and open the popup
     const width = 700;
