@@ -245,7 +245,7 @@
   
   // Update this URL to your specific Tally form
 
-const SELHUE-PAY = 'https://selhue.com/pay/process';
+const SELHUE_PAY = 'https://selhue.com/pay/process';
   
 function selhuePay() {
    
@@ -265,7 +265,7 @@ function selhuePay() {
     const totalText = document.getElementById('total-price').innerText;
 
     // 3. Construct URL
-    const url = `${SELHUE-PAY}?o=${encodeURIComponent(orderString)}&p=${encodeURIComponent(totalText)}`;
+    const url = `${SELHUE_PAY}?o=${encodeURIComponent(orderString)}&p=${encodeURIComponent(totalText)}`;
 
     // 4. Center and open the popup
     const width = 700;
